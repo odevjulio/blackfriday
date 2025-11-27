@@ -1,641 +1,621 @@
-    /* --- 1. Configurações Globais e Variáveis --- */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-        text-decoration: none;
-    }
+/* --- 1. Configurações Globais e Variáveis --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
 
-    :root {
-        --verde-escuro: #3C4D39;
-        --verde-claro: #92A48B;
-        --rose: #C3B2C6;
-        --marrom: #939393;
-        --bege: #F1EDEC;
-        --dourado: #AF8F5C;
-        --preto: #000000;
-        --fustat: "Fustat", serif;
-        --alexandria: "Alexandria", serif;
-        --kadwa: "Kadwa", serif;
-        --footer-font: "ABeeZee", sans-serif;
-    }
+:root {
+    --verde-escuro: #3C4D39;
+    --verde-claro: #92A48B;
+    --rose: #C3B2C6;
+    --marrom: #939393;
+    --bege: #F1EDEC;
+    --dourado: #AF8F5C;
+    --preto: #000000;
+    --fustat: "Fustat", serif;
+    --alexandria: "Alexandria", serif;
+    --kadwa: "Kadwa", serif;
+    --footer-font: "ABeeZee", sans-serif;
+}
 
-    body {
-        font-family: "Gabriela", serif;
-        text-align: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: var(--preto);
-    }
+body {
+    font-family: "Gabriela", serif;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: var(--preto);
+    overflow-x: hidden; /* Evita rolagem lateral indesejada */
+}
 
-    /* --- 2. Seções Principais (Header, Intro, Botão) --- */
-    header {
-        padding: 20px;
-    }
+/* --- 2. Seções Principais (Header, Intro, Botão) --- */
+header {
+    padding: 20px;
+}
 
-    header img {
-        height: auto;
+header img {
+    height: auto;
+    max-width: 100%;
+}
 
-    }
-    .txt-atencao {
-        color: var(--bege);
-        font-size: 2.5rem;
-        margin-bottom: 1px;
-        font-weight: bold;
-        font-family: "Alexandria", sans-serif;
-    }
+.txt-atencao {
+    color: var(--bege);
+    font-size: 2.5rem;
+    margin-bottom: 1px;
+    font-weight: bold;
+    font-family: "Alexandria", sans-serif;
+}
 
+.promo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* espaço entre os blocos desktop */
+    margin-top: 30px;
+    flex-wrap: wrap; 
+    width: 100%;
+    padding: 0 10px;
+}
+
+.promo-box {
+    margin-bottom: 60px;
+}
+
+.promo-box h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--bege);
+    font-family: "Alexandria", sans-serif;
+}
+
+.antes {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--bege);
+    font-family: "Alexandria", sans-serif;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: red;
+    font-weight: bold;
+    font-family: "Alexandria", sans-serif;
+}
+
+.depois {
+    font-size: 38px;
+    font-weight: 800;
+    margin-top: 5px;
+    color: var(--bege);
+    font-family: "Alexandria", sans-serif;
+}
+
+.texto-acima-botao {
+    color: var(--bege);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: "Alexandria", sans-serif;
+    padding: 0 10px;
+}
+
+.intro {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    color: var(--bege);
+}
+
+.intro h1 {
+    text-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: var(--verde-escuro);
+    width: 45%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+iframe {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    max-width: 90%; 
+}
+
+button {
+    padding: 30px 70px;
+    margin-bottom: 50px;
+    color: var(--preto);
+    background-color: var(--dourado);
+    width: 55%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: "Alexandria", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--bege);
+    color: var(--preto);
+    transform: scale(1.05);
+}
+
+/* --- 3. Seção Benefícios --- */
+.beneficios {
+    margin: 50px 0;
+    padding: 0 15px;
+}
+
+.beneficios h2 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: var(--bege);
+}
+
+/* O card de benefício individual */
+.Beneficio1 {
+    display: flex;
+    background-color: var(--bege);
+    width: 350px;
+    min-height: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* O container do grid de benefícios */
+.Benficios-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.icone-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.backgrodb {
+    background-color: var(--dourado);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.Beneficio1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+.Beneficio1 h3 {
+    font-size: 15px;
+    color: var(--preto);
+    margin: 0;
+    text-align: left;
+}
+
+/* --- 4. Seção Catálogo --- */
+.catalogo {
+    margin: 50px 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.catalogo h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--bege);
+}
+
+.imagens__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px; 
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.imagens__grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 3px solid var(--marrom);
+}
+
+/* --- 5. Seção Depoimentos --- */
+.depoimentos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.depoimentos__titulo {
+    color: var(--bege);
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.depoimento-card {
+    background-color: #D3B89E;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--preto);
+    text-align: left;
+}
+
+.depoimento-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.depoimento-card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid var(--dourado);
+}
+
+.depoimento-card__nome {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.depoimento-card__texto {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    clear: both;
+}
+
+.depoimento-card__joia {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 15px;
+    border: 1px solid #4B382D;
+}
+
+/* --- 6. Footer --- */
+.footer {
+    background-color: var(--preto);
+    color: var(--bege);
+    padding: 2.5rem 1rem 0.5rem 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.linha {
+    border: 0;
+    border-top: 3px solid var(--dourado);
+    margin: 0 auto 30px auto;
+    width: 100%;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    align-items: flex-start;
+}
+
+.footer__content h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--bege);
+}
+
+.footer__coluna-1 {
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo {
+    max-width: 250px;
+    height: auto;
+}
+
+.footer__coluna-2 {
+    gap: 30px;
+    display: flex;
+}
+
+.footer__coluna-2, .footer__coluna-3 {
+    padding: 0 1rem;
+}
+
+.footer__secao {
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer__coluna-2 .footer__secao {
+    margin-bottom: 1.5rem;
+}
+
+.footer__coluna-2 p, .footer__coluna-2 a, .footer__links a {
+    color: var(--bege);
+    text-decoration: none;
+    font-size: 0.95em;
+    margin: 0.3rem 0;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer__social i, .footer__social img {
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    color: var(--bege);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__slogan {
+    font-family: "Gabriela", serif;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+.footer__contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+
+/* --- 7. Media Queries (RESPONSIVIDADE ATUALIZADA) --- */
+
+/* --- TABLETS E LAPTOPS PEQUENOS (max-width: 992px) --- */
+@media (max-width: 992px) {
+    
+    .intro h4 { width: 70%; }
+
+    /* PROMOÇÃO: Lado a Lado (Row) com ajuste de tamanho */
     .promo-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 80px; /* espaço entre os blocos */
+        flex-direction: row; /* Garante horizontal */
+        flex-wrap: nowrap;   /* Impede quebra de linha */
+        gap: 20px;           /* Espaço médio */
         margin-top: 30px;
-        flex-wrap: wrap; /* caso for mobile, quebra automaticamente */
+        align-items: flex-start;
+        padding: 0 20px;
     }
 
     .promo-box {
-        margin-bottom: 60px;
+        width: 50%;          /* Metade da tela para cada */
+        margin-bottom: 40px;
     }
 
+    /* Ajuste de fontes para Tablet */
     .promo-box h1 {
-        font-size: 40px;
-        font-weight: 800;
-        margin-bottom: 10px;
-        color: var(--bege);
-        font-family: "Alexandria", sans-serif;
-    }
-
-    .antes {
-        font-size: 22px;
-        margin-bottom: 10px;
-        color: var(--bege);
-        font-family: "Alexandria", sans-serif;
-    }
-
-    .strike {
-        text-decoration: line-through;
-        color: red;
-        font-weight: bold;
-        font-family: "Alexandria", sans-serif;
-        
-    }
-
-    .depois {
-        font-size: 38px;
-        font-weight: 800;
-        margin-top: 5px;
-        color: var(--bege);
-        font-family: "Alexandria", sans-serif;
-    }
-
-    .texto-acima-botao {
-        color: var(--bege);
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        font-weight: bold;
-        font-family: "Alexandria", sans-serif;
-    }
-
-    .intro {
-        margin-bottom: 30px;
-        padding: 0 20px;
-        color: var(--bege);
-    }
-
-    .intro h1 {
-        text-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .intro h4 {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.5;
-        background-color: var(--verde-escuro);
-        width: 45%;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    iframe {
-        margin-bottom: 30px;
-        border-radius: 20px;
-        /* Adicionado para responsividade básica */
-        max-width: 90%; 
-    }
-
-    button {
-        padding: 30px 70px;
-        margin-bottom: 50px;
-        color: var(--preto);
-        background-color: var(--dourado);
-        width: 55%;
-        text-align: center;
-        margin: 0 auto;
-        border-radius: 40px;
-        text-decoration: none;
-        font-family: "Alexandria", sans-serif;
-        font-weight: 800;
-        font-size: 30px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: all 0.3s ease-in-out;
-    }
-
-    button:hover {
-        background-color: var(--bege);
-        color: var(--preto);
-        transform: scale(1.05);
-    }
-
-    /* --- 3. Seção Benefícios --- */
-    .beneficios {
-        margin: 50px;
-    }
-
-    .beneficios h2 {
-        margin-bottom: 30px;
-        font-size: 40px;
-        color: var(--bege);
-    }
-
-    /* O card de benefício individual */
-    .Beneficio1 {
+        font-size: 28px;
+        min-height: 60px; /* Altura mínima para alinhar títulos de tamanhos diferentes */
         display: flex;
-        background-color: var(--bege);
-        width: 350px;
-        min-height: 100px;
-        border-radius: 20px;
-        padding: 20px;
-        margin-bottom: 20px;
-        align-items: center;
-    }
-
-    /* O container do grid de benefícios */
-    .Benficios-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        justify-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    /* --- Container do Ícone/Círculo (CORRIGIDO: Movido para fora) --- */
-    .icone-box {
-        position: relative;
-        width: 80px;
-        height: 80px;
-        margin-right: 20px;
-    }
-
-    /* --- O Círculo Colorido (CORRIGIDO: Movido para fora) --- */
-    .backgrodb {
-        background-color: var(--dourado);
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-    }
-
-    /* --- Imagem do Benefício (CORRIGIDO: Centralização e Posição) --- */
-    .Beneficio1 img {
-        position: absolute;
-        /* Correção para centralização perfeita */
-    top: 41px;
-        left: 40px;
-        transform: translate(-50%, -50%);
-        width: 60px;
-        height: 60px;
-        z-index: 1;
-        margin-right: 0;
-    }
-
-    /* --- Texto do Benefício (CORRIGIDO: Movido para fora) --- */
-    .Beneficio1 h3 {
-        font-size: 15px;
-        color: var(--preto);
-        margin: 0;
-    }
-
-    /* --- 4. Seção Catálogo --- */
-    .catalogo {
-        margin: 50px 0;
-        text-align: center;
-    }
-
-    .catalogo h2 {
-        margin-bottom: 20px;
-        font-size: 40px;
-        color: var(--bege);
-    }
-
-    .imagens__grid {
-        display: grid;
-        /* CORREÇÃO: Para 3 colunas, o max-width precisa ser maior */
-        grid-template-columns: repeat(3, 1fr);
-        /* CORREÇÃO: 650px é muito pequeno para 3 colunas. Ajustado para 1000px. */
-        max-width: 1000px; 
-        margin: 0 auto;
         align-items: center;
         justify-content: center;
-        gap: 15px;
-        padding: 10px;
-    }
-
-    .imagens__grid img {
-        /* CORREÇÃO: Usar 100% de largura para ser responsivo dentro do grid */
-        width: 300px;
-        height: 450px;
-        border-radius: 20px;
-        border: 3px solid var(--marrom);
-    }
-
-    /* --- 5. Seção Depoimentos --- */
-    .depoimentos {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .depoimentos__titulo {
-        color: var(--bege);
-        font-size: 40px;
-        margin-bottom: 30px;
-    }
-
-    .depoimento-card {
-        background-color: #D3B89E;
-        max-width: 700px;
-        margin: 20px auto;
-        padding: 20px;
-        border-radius: 10px;
-        color: var(--preto);
-        text-align: left;
-    }
-
-    .depoimento-card__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .depoimento-card__avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 10px;
-        border: 2px solid var(--dourado);
-    }
-
-    .depoimento-card__nome {
-        font-weight: bold;
-        margin: 0;
-        font-size: 1.1em;
-    }
-
-    .depoimento-card__texto {
-        font-size: 0.95em;
-        line-height: 1.4;
-        margin-bottom: 15px;
-        clear: both;
-    }
-
-    .depoimento-card__joia {
-        width: 150px;
-        height: 190px;
-        display: block;
-        /* CORREÇÃO: Centraliza a imagem da joia */
-        margin: 0 auto; 
-        border-radius: 15px;
-        border: 1px solid #4B382D;
-    }
-
-    /* --- 6. Footer --- */
-    .footer {
-        background-color: var(--preto);
-        color: var(--bege);
-        padding: 2.5rem 1rem 0.5rem 1rem;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-    }
-
-    .linha {
-        border: 0;
-        border-top: 3px solid var(--dourado);
-        margin: 0 auto 30px auto;
-        width: 100%;
-    }
-
-    .footer__content {
-        display: grid;
-        grid-template-columns: 2fr 1.5fr 1fr;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-bottom: 30px;
-        align-items: flex-start;
-    }
-
-    .footer__content h3 {
-        font-size: 1.1em;
-        font-weight: bold;
-        margin-bottom: 0.8rem;
-        color: var(--bege);
-    }
-
-    .footer__coluna-1 {
-        display: flex;
-        align-items: center;
-    }
-
-    .footer__logo {
-        max-width: 250px;
-        height: 100px;
-    }
-
-    .footer__coluna-2 {
-        gap: 30px;
-        display: flex;
-    }
-
-    .footer__coluna-2, .footer__coluna-3 {
-        padding: 0 1rem;
-    }
-
-    .footer__secao {
-        width: 200px;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    .footer__coluna-2 .footer__secao {
-        margin-bottom: 1.5rem;
-    }
-
-    .footer__coluna-2 p, .footer__coluna-2 a {
-        color: var(--bege);
-        text-decoration: none;
-        font-size: 0.95em;
-        margin: 0.3rem 0;
-        display: block;
-    }
-
-    .footer__links a {
-        font-family: 'Montserrat', sans-serif;
-        display: block;
-        color: var(--bege);
-        text-decoration: none;
-        margin: 0.3rem 0;
-        font-size: 0.95em;
-    }
-
-    .footer__social i, .footer__social img {
-        font-size: 1.5em;
-        width: 30px;
-        height: 30px;
-        opacity: 0.8;
-        color: var(--bege);
-    }
-
-    .footer__social {
-        display: flex;
-        /* Alinhamento dos ícones (ajustado de center para start) */
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .footer__slogan {
-        font-family: "Gabriela", serif;
-        text-align: center;
-        padding-top: 10px;
-        margin: 0 auto;
-        font-size: 25px;
-    }
-
-    .footer__contact-list {
-        display: flex;
-        flex-direction: column;
-        /* Alinhamento dos links de contato (ajustado de center para start) */
-        align-items: center;
-        list-style: none;
-        padding: 0; /* Remove padding padrão da lista */
-    }
-
-
-    /* --- 7. Media Queries para Responsividade --- */
-
-    /* --- Telas de Tablet --- */
-    @media (max-width: 992px) {
-        .intro h4 {
-            width: 70%;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        
-
-        .promo-container {
-        gap: 30px;
-        margin-top: 15px;
-    }
-
-         header {
-        padding-bottom: 5px;
-    }
-
-    header img {
-        width: 230px;
-    }
-    .txt-atencao {
-        margin-top: -10px;
-        margin-bottom: 5px;
-        font-size: 2.5rem;
+        line-height: 1.1;
     }
     
+    .antes { font-size: 18px; }
+    .depois { font-size: 28px; }
 
-        .promo-box {
-        width: 260px; /* reduz caixas */
-        margin-bottom: 50px; /* era 60px */
-    }
-
-        .antes {
-        font-size: 16px;
-    }
-
-    .depois {
-        font-size: 26px;
-    }
-
-    .cta {
-        margin-top: -10px; /* puxa botão pra cima */
-    }
+    /* Botão e CTA */
     button {
-        width: 75%;
-        font-size: 22px;
+        width: 80%;
+        font-size: 24px;
         padding: 20px 40px;
     }
 
-    h1 {
-        font-size: 10px;
+    /* Catálogo muda para 2 colunas */
+    .imagens__grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 95%;
     }
 
-
-
-
-        button {
-            width: 70%;
-            font-size: 24px;
-            padding: 25px 50px;
-        }
-
-        /* Catálogo muda para 2 colunas */
-        .imagens__grid {
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 90%;
-        }
-
-        /* Footer muda para 2 colunas: Logo + Coluna 2 */
-        .footer__content {
-            grid-template-columns: 1fr 1fr; 
-            gap: 30px;
-            padding: 0 20px 30px 20px;
-        }
-
-        /* Coluna 3 (Departamento) vai para a linha de baixo */
-        .footer__coluna-3 {
-            grid-column: 1 / -1; /* Ofont-display: swap  ;cupa a linha inteira */
-            margin-top: 20px;
-            padding: 0;
-        }
-
-        .footer__coluna-2 {
-            display: block; /* Empilha as seções de contato */
-        }
+    /* Footer muda layout */
+    .footer__content {
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px;
+        padding: 0 20px 30px 20px;
     }
-
-    /* --- Telas de Celular --- */
-    @media (max-width: 600px) {
-        header img {
-            width: 220px;
-            justify-content: center;
-            align-items: center;
-            height: auto;
-        }
-
-        .txt-atencao {
-        margin-bottom: 15px;
-        font-size: 2.5rem;
+    
+    .footer__coluna-3 {
+        grid-column: span 2;
+        text-align: center;
+        margin-top: 20px;
     }
-
-    .promo-container {
+    
+    .footer__coluna-2 {
+        flex-direction: column;
         gap: 20px;
-        margin: 10px;
     }
+}
+
+/* --- CELULARES E TELAS MENORES (max-width: 600px) --- */
+/* Cobre tanto 600px quanto o antigo 550px com a mesma regra unificada */
+@media (max-width: 600px) {
+
+    /* HEADER */
+    header { padding: 10px 0; }
+    header img { width: 190px; }
+
+    /* TEXTOS GERAIS */
+    .txt-atencao {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .intro h4 { width: 95%; font-size: 1rem; }
+
+    /* PROMOÇÃO: Força Lado a Lado Apertado (Horizontal) */
+    .promo-container {
+        display: flex;
+        flex-direction: row !important; /* Força horizontal */
+        flex-wrap: nowrap;
+        gap: 5px; /* Espaço mínimo entre colunas */
+        margin: 20px;
+        padding: 0 5px;
+        justify-content: center;
+    }
+
+    
+
 
     .promo-box {
-        width: 200px;
-        margin-bottom: 15px;
+        width: 50%;
+        margin-bottom: 20px;
+        padding: 0;
     }
 
+    /* Fontes REDUZIDAS para caber no celular lado a lado */
     .promo-box h1 {
-        font-size: 22px;
+        font-size: 17px; /* Fonte bem menor para não estourar */
         line-height: 1.1;
+        margin-bottom: 5px;
+        min-height: 45px; /* Garante alinhamento dos preços */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .antes { 
+        font-size: 11px; 
+        margin-bottom: 2px;
+    }
+    
+    .depois { 
+        font-size: 19px; 
+        line-height: 1.1;
+        margin-top: 2px;
     }
 
-    .antes {
-        font-size: 14px;
+    /* BOTÃO CTA */
+    button {
+        width: 95%;
+        font-size: 18px;
+        padding: 15px 10px;
+        border-radius: 30px;
+    }
+    
+    .texto-acima-botao {
+        font-size: 1.1rem;
+        padding: 0 10px;
     }
 
-    .depois {
-        font-size: 20px;
+    /* BENEFÍCIOS (Vertical / Empilhado) */
+    .Benficios-cards {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
     }
 
-    .cta {
-        margin-top: -10px;
+    .Beneficio1 {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        text-align: center;
     }
 
-        .intro h4 {
-            width: 90%;
-            font-size: 1rem;
-        }
-
-        button {
-            width: 90%;
-            font-size: 18px;
-            padding: 20px 40px;
-        }
-
-        iframe {
-            width: 400px;
-            height: 300px;
-        }
-
-        .beneficios h2, .catalogo h2, .depoimentos__titulo {
-            font-size: 30px;
-        }
-
-        /* Benefícios e Catálogo mudam para 1 coluna */
-        .Benficios-cards {
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            grid-template-columns: 1fr;
-        }
-
-        .imagens__grid {
-            grid-template-columns: 1fr;
-            max-width: 90%;
-            align-items: center;
-            justify-items: center;
-        }
-        
-        .depoimento-card {
-            max-width: 90%;
-        }
-
-        /* Footer muda para 1 coluna */
-        .footer__content {
-            grid-template-columns: 1fr; 
-            gap: 30px;
-            padding: 0 15px 30px 15px;
-        }
-        
-        .footer__coluna-1, .footer__coluna-2, .footer__coluna-3 {
-            text-align: center; 
-            padding: 0;
-        }
-        
-        .footer__coluna-1 {
-            margin-bottom: 20px;
-        }
-        
-        .footer__logo {
-            margin: 0 auto; /* Centraliza a logo */
-            max-width: 200px;
-        }
-
-        .footer__coluna-2 {
-            justify-content: center;
-            display: grid
-        }
-
-        .footer__social {
-            justify-content: center; /* Centraliza ícones sociais */
-        }
-        
-        .footer__contact-list {
-            align-items: center; /* Centraliza lista de contato */
-        }
-        
-        .footer__slogan {
-            font-size: 18px; 
-        }
+    .icone-box { margin-right: 0; margin-bottom: 10px; }
+    
+    .Beneficio1 img {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
     }
+    
+    .Beneficio1 h3 { text-align: center; }
+
+    /* VÍDEO E CATÁLOGO */
+    iframe { width: 100% !important; aspect-ratio: 16/9; height: auto; }
+
+    .imagens__grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .imagens__grid img { width: 100%; max-width: 320px; }
+
+    /* DEPOIMENTOS */
+    .depoimento-card { max-width: 95%; }
+    .depoimentos__titulo { font-size: 28px; }
+
+    /* FOOTER (Empilhado) */
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 15px 30px 15px;
+    }
+
+    .footer__coluna-1, .footer__coluna-2, .footer__coluna-3 {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer__coluna-2 { display: flex; align-items: center; } 
+    
+    .footer__logo { margin: 0 auto; width: 180px; }
+    .footer__social { justify-content: center; }
+    .footer__contact-list { align-items: center; }
+    .footer__slogan { font-size: 18px; }
+}   
