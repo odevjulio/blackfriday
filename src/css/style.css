@@ -509,11 +509,11 @@ button:hover {
         flex-wrap: nowrap;
         gap: 5px; /* Espaço mínimo entre colunas */
         margin: 20px;
-        padding: 0 5px;
+        padding-left: 0px;
         justify-content: center;
     }
 
-    
+
 
 
     .promo-box {
@@ -535,13 +535,11 @@ button:hover {
     
     .antes { 
         font-size: 11px; 
-        margin-bottom: 2px;
     }
     
     .depois { 
         font-size: 19px; 
         line-height: 1.1;
-        margin-top: 2px;
     }
 
     /* BOTÃO CTA */
